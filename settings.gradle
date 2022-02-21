@@ -1,0 +1,4 @@
+rootProject.name = 'gradle-demo'
+include 'gradle-submodule-core'
+include 'gradle-submodule-service'
+

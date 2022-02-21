@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id "io.freefair.lombok" version "5.0.0"
+}
+
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'io.freefair.lombok'
+
+    group 'com.gradle.sample'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    ext {
+        set('springCloudVersion','Hoxton.SR3')
+        set('lombokVersion', '1.18.12')
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom 'org.springframework.boot:spring-boot-dependencies:2.2.5.RELEASE'
+        }
+    }
+
+}
+
+subprojects {
+    sourceCompatibility = 1.8
+
+    /**
+     * add dependencies into subprojects, all the sub-modules will load the dependencies automatically, and no need to
+     * add dependencies{} at each sub-module.
+     */
+    dependencies {
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+//    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+//    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//        exclude group: 'org.junit.jupiter', module:'junit-jupiter'
+    }
+
+    }
+}
+
+
+
+
+
+
+
+
+// disable gradle auto fix dependency conflicts
+/**
+configurations.all {
+    resolutionStrategy {
+        failOnVersionConflict()
+        force 'xxx:xxx:xx' force to use a specific version of dependency
+    }
+}
+ **/
+
+
+
+

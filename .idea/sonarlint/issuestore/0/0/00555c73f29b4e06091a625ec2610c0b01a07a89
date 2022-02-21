@@ -1,0 +1,15 @@
+
+•
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘
+d
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ã¦ÒŽ
+d
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ã¦ÒŽ
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
+U
+java:S1854"<Remove this useless assignment to local variable "preValue".(ê¢ÇÑþÿÿÿÿ
+K	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÈÑv
