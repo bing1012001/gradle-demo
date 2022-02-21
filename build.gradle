@@ -35,7 +35,7 @@ allprojects {
 }
 
 subprojects {
-    sourceCompatibility = 1.8
+    sourceCompatibility = 15
 
     /**
      * add dependencies into subprojects, all the sub-modules will load the dependencies automatically, and no need to
