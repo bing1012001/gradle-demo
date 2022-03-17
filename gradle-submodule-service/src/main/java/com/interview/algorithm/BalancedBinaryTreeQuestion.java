@@ -17,7 +17,7 @@ public class BalancedBinaryTreeQuestion {
         }
     }
 
-    class Node {
+    static class Node {
         int value;
         Node left;
         Node right;
